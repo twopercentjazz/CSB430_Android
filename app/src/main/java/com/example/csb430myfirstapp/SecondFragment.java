@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.csb430myfirstapp.databinding.FragmentSecondBinding;
+
+import java.util.Random;
 
 public class SecondFragment extends Fragment {
 
@@ -28,6 +31,21 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if (getArguments() != null) {
+            int number = getArguments().getInt("myArg");
+            TextView textViewHeader = view.findViewById(R.id.textview_header);
+            String headerText = getResources().getString(R.string.randText);
+            String formattedHeaderText = String.format(headerText, number);
+            textViewHeader.setText(formattedHeaderText);
+
+            TextView textViewRandom = view.findViewById(R.id.textview_random);
+            Random random = new Random();
+            int randomNumber = 0;
+            if (number > 0) {
+                randomNumber = random.nextInt(number + 1);
+            }
+            textViewRandom.setText(String.valueOf(randomNumber));
+        }
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override

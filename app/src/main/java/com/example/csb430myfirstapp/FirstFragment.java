@@ -65,8 +65,12 @@ public class FirstFragment extends Fragment {
         binding.randomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                TextView textView = getView().findViewById(R.id.textview_first);
+                int number = Integer.parseInt(textView.getText().toString());
+                Bundle bundle = new Bundle();
+                bundle.putInt("myArg", number);
                 NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                        .navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
             }
         });
     }
