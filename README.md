@@ -1,2 +1,2 @@
 # CSB430 Android App Development
-My First App
+My First App (Chris)
