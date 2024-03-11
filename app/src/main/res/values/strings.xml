@@ -3,10 +3,15 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">My First App</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="second_fragment_label">My First App</string>
     <string name="next">Next</string>
+    <string name="toast">Toast</string>
+    <string name="random">Random</string>
+    <string name="count">Count</string>
     <string name="previous">Previous</string>
     <string name="helloWorld">Hello World</string>
+    <string name="num">0</string>
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
