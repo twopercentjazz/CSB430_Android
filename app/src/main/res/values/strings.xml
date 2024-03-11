@@ -8,9 +8,10 @@
     <string name="toast">TOAST</string>
     <string name="random">RANDOM</string>
     <string name="count">COUNT</string>
-    <string name="previous">Previous</string>
+    <string name="previous">PREVIOUS</string>
     <string name="helloWorld">Hello World</string>
     <string name="num">0</string>
+    <string name="randText">Here is a random number between 0 and %d.</string>
 
 
     <string name="lorem_ipsum">
